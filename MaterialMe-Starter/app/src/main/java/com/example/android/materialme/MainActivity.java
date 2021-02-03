@@ -18,10 +18,15 @@ package com.example.android.materialme;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+//import androidx.appcompat.widget.LinearLayoutManager;
+//import androidx.appcompat.widget.RecyclerView;
+//import androidx.appcompat.widget.helper.ItemTouchHelper;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -58,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         // Get the data.
         initializeData();
 
-//        Implement swipe to dismiss and drag and drop
+//        Implement swipe to dismiss and drag and drop Sean!
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
                 | ItemTouchHelper.DOWN | ItemTouchHelper.UP, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT)
         {
@@ -108,6 +113,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Notify the adapter of the change.
         mAdapter.notifyDataSetChanged();
+    }
+
+    public void resetSports(View view) {
+        initializeData();
     }
     /* TODO
     * Android fundamentals 05.2: Cards and colors

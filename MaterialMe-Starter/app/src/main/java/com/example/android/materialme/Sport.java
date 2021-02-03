@@ -24,7 +24,7 @@ class Sport {
     // Member variables representing the title and information about the sport.
     private String title;
     private String info;
-    private final int imageResource;
+    private final int imageResource; // Added image to sport class!
 
     /**
      * Constructor for the Sport data model.
@@ -35,7 +35,7 @@ class Sport {
     Sport(String title, String info, int imageResource) {
         this.title = title;
         this.info = info;
-        this.imageResource = imageResource;
+        this.imageResource = imageResource; // add image to constructor Sean!
     }
 
     /**
